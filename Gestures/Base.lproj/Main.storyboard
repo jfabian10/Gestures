@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11198.2" systemVersion="15G31" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" colorMatched="YES" initialViewController="49e-Tb-3d3">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="yl2-sM-qoP">
+            <objects>
+                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
+                        <rect key="frame" x="0.0" y="975" width="768" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="t65-3n-r1h" kind="relationship" relationship="viewControllers" id="1IJ-NQ-cd4"/>
+                        <segue destination="eLc-pC-J3F" kind="relationship" relationship="viewControllers" id="Ar0-1k-NJ8"/>
+                        <segue destination="dxW-C4-8kF" kind="relationship" relationship="viewControllers" id="2pn-IA-adz"/>
+                        <segue destination="nQa-av-oGK" kind="relationship" relationship="viewControllers" id="rja-8a-EZl"/>
+                        <segue destination="c3M-9P-QLs" kind="relationship" relationship="viewControllers" id="KqT-z3-NRW"/>
+                        <segue destination="Qnx-gp-Pu9" kind="relationship" relationship="viewControllers" id="rXf-fa-VLn"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-381" y="-415"/>
+        </scene>
+        <!--Tap-->
+        <scene sceneID="mEz-h2-8Kw">
+            <objects>
+                <viewController id="eLc-pC-J3F" customClass="TapViewController" customModule="Gestures" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bXd-Sx-Bzl">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Single tap with 1 or 2 fingers. Double tap with 1 or 2 fingers." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7e7-eC-ddC">
+                                <frame key="frameInset" minX="192" minY="30" width="640" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" id="wZy-gk-uEt">
+                                <frame key="frameInset" minX="192" minY="64" width="640" height="640"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="VTCampusMap" id="sVl-H9-mcK">
+                                        <rect key="frame" x="0.0" y="0.0" width="640" height="640"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                                <connections>
+                                    <outlet property="delegate" destination="eLc-pC-J3F" id="Jpi-hl-yWX"/>
+                                </connections>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Tap" image="TabBarIcon-Tap" id="4w9-Oh-GGD"/>
+                    <connections>
+                        <outlet property="imageScrollView" destination="wZy-gk-uEt" id="A7u-2L-r54"/>
+                        <outlet property="imageView" destination="sVl-H9-mcK" id="7b2-fw-KR4"/>
+                        <outlet property="messageBox" destination="7e7-eC-ddC" id="CX1-Js-2Jc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="akw-a8-O7g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1663" y="-1820"/>
+        </scene>
+        <!--Swipe-->
+        <scene sceneID="7WZ-uu-xAq">
+            <objects>
+                <viewController id="t65-3n-r1h" customClass="SwipeViewController" customModule="Gestures" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xf4-bH-Mb1">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Swipe to Left, Right, Up or Down" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="p1h-3p-2MK">
+                                <frame key="frameInset" minX="192" minY="30" width="640" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Swipe" image="TabBarIcon-Swipe" id="Zt9-89-JbC"/>
+                    <connections>
+                        <outlet property="messageBox" destination="p1h-3p-2MK" id="IBD-uA-k9T"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uHh-mR-egQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1695" y="-729"/>
+        </scene>
+        <!--Rotation-->
+        <scene sceneID="dV3-Zk-MDb">
+            <objects>
+                <viewController id="dxW-C4-8kF" customClass="RotationViewController" customModule="Gestures" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Q0I-pe-RGg">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Touch the picture with 2 fingers and rotate clockwise or counterclockwise." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ii6-Y7-Z4W">
+                                <frame key="frameInset" minX="112" minY="30" width="800" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Autumn" id="Wrd-w6-X5d">
+                                <frame key="frameInset" minX="312" minY="234" width="400" height="300"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Rotation" image="TabBarIcon-Rotation" id="HbZ-hq-OCX"/>
+                    <connections>
+                        <outlet property="imageView" destination="Wrd-w6-X5d" id="js1-7q-dvN"/>
+                        <outlet property="messageBox" destination="Ii6-Y7-Z4W" id="EJE-Qt-zPr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OgF-cC-8PN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1663" y="647"/>
+        </scene>
+        <!--Long Press-->
+        <scene sceneID="jbk-Eu-SX3">
+            <objects>
+                <viewController id="Qnx-gp-Pu9" customClass="LongPressViewController" customModule="Gestures" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kby-In-Wxc">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Long Press, i.e., touch and press the picture more than 1 second, to view options." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="NJZ-C2-VHk">
+                                <frame key="frameInset" minX="162" minY="64" width="700" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Autumn" id="agy-3J-srG">
+                                <frame key="frameInset" minX="312" minY="237" width="400" height="300"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Long Press" image="TabBarIcon-LongPress" id="ssv-BH-al7"/>
+                    <connections>
+                        <outlet property="imageView" destination="agy-3J-srG" id="xfy-dA-4gJ"/>
+                        <outlet property="messageBox" destination="NJZ-C2-VHk" id="2sb-3j-6ao"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xKs-SA-yPZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-747" y="1910"/>
+        </scene>
+        <!--Pan-->
+        <scene sceneID="NkN-oY-c7D">
+            <objects>
+                <viewController id="c3M-9P-QLs" customClass="PanViewController" customModule="Gestures" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="65F-An-bSf">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Pan (drag) the jigsaw puzzle pieces to put them together." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="uMm-kS-jcD">
+                                <frame key="frameInset" minX="192" minY="24" width="640" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="PuzzlePiece1" id="qUZ-bW-3xL">
+                                <frame key="frameInset" minX="405" minY="92" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="PuzzlePiece3" id="vgA-vr-Pc6">
+                                <frame key="frameInset" minX="795" minY="244" width="126" height="211"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView multipleTouchEnabled="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="PuzzlePiece4" id="iiY-B6-hOC">
+                                <frame key="frameInset" minX="407" minY="389" width="211" height="163"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="PuzzlePiece2" id="RZQ-Uz-usu">
+                                <frame key="frameInset" minX="102" minY="260" width="132" height="179"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Pan" image="TabBarIcon-Pan" id="46o-We-tHO"/>
+                    <connections>
+                        <outlet property="imageView1" destination="qUZ-bW-3xL" id="WxP-XC-Oz4"/>
+                        <outlet property="imageView2" destination="RZQ-Uz-usu" id="Cpc-TU-AXY"/>
+                        <outlet property="imageView3" destination="vgA-vr-Pc6" id="ulk-93-RXP"/>
+                        <outlet property="imageView4" destination="iiY-B6-hOC" id="Wne-3m-UZm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="reT-i5-fFg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="482" y="1910"/>
+        </scene>
+        <!--Pinch-->
+        <scene sceneID="kM4-lh-alr">
+            <objects>
+                <viewController id="nQa-av-oGK" customClass="PinchViewController" customModule="Gestures" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="c83-Uj-5So">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Pinch Open or Pinch Close the Picture." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="AQb-cg-PNv">
+                                <frame key="frameInset" minX="112" minY="30" width="800" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Scene" id="Tfo-1i-ZFa">
+                                <frame key="frameInset" minX="312" minY="221" width="400" height="300"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Pinch" image="TabBarIcon-Pinch" id="lA7-KQ-61i"/>
+                    <connections>
+                        <outlet property="imageView" destination="Tfo-1i-ZFa" id="k5h-hs-mwA"/>
+                        <outlet property="messageBox" destination="AQb-cg-PNv" id="H14-u4-xyC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xtx-2P-PnP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1663" y="1910"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Autumn" width="200" height="150"/>
+        <image name="PuzzlePiece1" width="107" height="63"/>
+        <image name="PuzzlePiece2" width="66" height="89"/>
+        <image name="PuzzlePiece3" width="63" height="105"/>
+        <image name="PuzzlePiece4" width="105" height="81"/>
+        <image name="Scene" width="960" height="640"/>
+        <image name="TabBarIcon-LongPress" width="30" height="30"/>
+        <image name="TabBarIcon-Pan" width="30" height="30"/>
+        <image name="TabBarIcon-Pinch" width="30" height="30"/>
+        <image name="TabBarIcon-Rotation" width="30" height="30"/>
+        <image name="TabBarIcon-Swipe" width="30" height="30"/>
+        <image name="TabBarIcon-Tap" width="30" height="30"/>
+        <image name="VTCampusMap" width="950" height="1200"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation" orientation="landscapeRight"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>
